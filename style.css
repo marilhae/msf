@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lexend+Giga:wght@100..900&display=swap');
+
+*{
+    /* ESTILIZAÇÃO DO CORPO DO SITE */
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Giga", sans-serif;
+    
+}
+.header{
+    /* PAGINA INICIAL */
+    width: 100%;
+    height: 100vh;
+    background-image:url(imagens/Img_principal.png);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    /* BARRA DE NAVEGAÇÃO */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+ .content{
+    /* ESTILIZAÇÃO DO TITULO PRINCIPAL */
+   margin-top: 10%;
+    margin-left: 11%;
+    
+    color: #fcf8f4;
+    /* justify-content: space-around;
+    padding;10px; */
+}
+.content h1{
+    font-size: 5rem;
+    line-height: 100px;
+    font-weight: 600;
+
+    
+}
+/* .content img{
+    position: relative;
+} */
+
+.content p{
+    max-width:300rem ;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff8f8;
+    align-items: flex-start;
+}
+/* EFEITO NO TITULO PRINCIPAL */
+.slide-left{
+    animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft{
+    0%{
+        transform:translate(200px) ;
+        opacity: 0;
+    }
+    100%{
+        transform:translate(0px) ;
+        opacity: 1;
+    }
+}
+p.slide-left{
+    animation-delay: 0.1s;
+}
+/* FIM DO EFEITO */
+
+/* ----------------------------------------introdução---------------------------- */
+.about{
+    width: 100%;
+    padding:78px 0px ;
+    background-color: #dbbe92;
+}
+.about img{
+    height:auto;
+    height: 520px;
+}
+.about-text{
+    width:550px;
+
+}
+.about .main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-text h1{
+    color: #693807;
+    font-size:40px ;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.about-text p{
+    color:#693807;
+    letter-spacing: 0.1px;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* ------------------------------------------HISTORIA DA ARTE BRASILEIRA---------------------- */
+/* --------------------------------------------------------------------------------------------- */
+.artebrasil{
+    padding: 80px 0px;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flew{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 20px;
+}
+.artebrasil h2{       
+    /* TITULO: HISTORIA */
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #7C430E;
+    font-weight: 400;
+    align-items: center;
+}
+.artebrasil h1{
+    font-family:"DM Serif Text", serif; 
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: #7C430E;
+    font-weight: 600;
+    margin-left: 50px;
+}
+.artebrasil p{
+    font-size: 22px;
+    color: #7C430E;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+}
+.artebrasil img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.btn{
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #886126;
+    transition: all 0.4s ease;   
+}
+.btn:hover{
+    transform: translateY(-5px);
+}
+@media screen and(max-width:768px) {
+    .row{
+        flew-direction: column;
+    }
+    .flew{
+       max-width: 100%; 
+    }
+    .artebrasil h2{
+        font-size: 31px ;
+    }
+    .artebrasil h1{
+        font-size: 31px ;
+    }
+    .artebrasil p{
+        font-size: 18px ;
+    }
+    .btn{
+        font-size: 16px;
+        padding: 8px 16px ;
+        margin-bottom: 30px;
+    }
+}
+
+/* ------------------------ACERVO DE MUSEUS------------------------------------- */
+.acervomuseus{
+    background-color: #886126;
+}
+.acervomuseus h1{
+    color: #693807;
+    padding: 10px;
+    text-align: center;
+}
+
+.mvv-container{
+    max-width: 90%;
+    margin: 50px auto 0;
+
+
+}
+.mvv-container .mvvblock{
+    margin-bottom: 50px ;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.mvv-container .mvvblock .image{
+ flex-wrap: 0 0 auto;
+ width: 400px;   
+ overflow:hidden ;
+ border-radius: 5px;
+ box-shadow: 0 0 10px 5px rgba(157, 157, 161, 0.5);
+}
+.mvv-container .mvvblock .image img{
+    width: 100%;
+    transition: .3s ;
+    transform: scale(1);
+
+}
+.mvv-container .mvvblock .image:hover img {
+  transform: scale(1.05);  
+}
+.mvv-container .mvvblock .contente{
+    flex: 0 0 auto;
+    width: calc(100% - 400px);
+    box-sizing: border-box ;
+    align-items: center;
+}
+.mvv-container .mvvblock .contente h2{
+    font-weight: 700;
+    font-size: 32px ;
+    color: #fcf8f4;
+    margin-bottom: 10px;
+}
+.mvv-container .mvvblock .contente p{
+    font-size: 18px;
+    color: #c9ad93;
+    font-weight: 500;
+}
+.btns{
+    text-decoration: none;
+    color: #7C430E;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #FFDEAE;
+    transition: all 0.4s ease;   
+}
+.btns:hover{
+    transform: translateY(5px);
+}
+@media screen and(max-width:768px) {
+    .row{
+        flew-direction: column;
+    }
+    .flew{
+       max-width: 100%; 
+    }
+    .artebrasil h2{
+        font-size: 31px ;
+    }
+    .artebrasil h1{
+        font-size: 31px ;
+    }
+    .artebrasil p{
+        font-size: 18px ;
+    }
+    .btn{
+        font-size: 16px;
+        padding: 8px 16px ;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .mvv-container .mvvblock:nth-child(odd) .image{
+        order: 1;
+    }
+    .mvv-container .mvvblock:nth-child(even) .image{
+        order: 2;
+    }
+    .mvv-container .mvvblock:nth-child(odd) .contente{
+        order: 2;
+        padding-left: 30px;
+    }
+    .mvv-container .mvvblock:nth-child(even) .contente{
+        order: 1;
+        padding-right: 30px;
+    }
+}
+
+
+
+/* ------------------------------------------PAGINA DE LOGIN------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.LOGIN{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('imagens/Img_fundologin.png') no-repeat; /*imagem de fundo*/
+    background-position: center; 
+    background-size: cover;
+    
+}
+.titulo{  /*cadastre-se(titulo principal)*/
+    color: white;
+    margin: 60px;
+}
+.titulo h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.titulo h2{
+    font-size: 30px;
+    text-align: center;
+}
+.card-login{  /*parte do login*/
+    width: 420px;
+    background: #886126;
+    color:white ;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+.card-login h1{ /*parte do login - titulo*/
+    font-size: 36px;
+    text-align: center;
+}
+.card-login .input-box{ /*parte do login -  caixa de texto*/
+    position: relative;
+    width: 100%;
+    height: 50px;  
+    margin: 30px 0;
+    background-color: white;
+}
+.input-box input{
+    width: 100%;
+    height:100%;
+    background: transparent;
+    border: none;
+    outline:none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 20px 45px 20px 20px;
+   
+}
+.input-box input::placeholder{
+    color: rgb(0, 0, 0);
+
+}
+
+ .input-button input{ /*parte do login - botao*/
+    width: 100%;
+    height: 40px;
+    background: #7C430E;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+}
+@media screen and(max-width:768px) {
+    .LOGIN{
+        flew-direction: column;
+    }
+    .form-cd{
+       max-width: 100%; 
+    }
+}
